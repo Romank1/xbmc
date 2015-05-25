@@ -76,7 +76,8 @@ CmadVRAllocatorPresenter::~CmadVRAllocatorPresenter()
   m_isDeviceSet = false;
   g_Windowing.GetKodi3DDevice()->SetPixelShader(NULL);
   g_Windowing.ResetForMadvr();
-
+  g_renderManager.UnInit();
+  
   // the order is important here
   m_pSubPicQueue = nullptr;
   m_pAllocator = nullptr;
